@@ -1,0 +1,17 @@
+<h2 class="text-center">ADD PERMISSION</h2>
+
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="5" nzRequired nzFor="public-key">Public key</nz-form-label>
+    <nz-form-control [nzSpan]="12" nzErrorTip="Please input Public key!"
+                     nzExtra="Enter public key of doctor to allow doctor to access patient's EHR">
+      <input id="public-key" type="text" nz-input formControlName="publicKey"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control [nzSpan]="12" [nzOffset]="5">
+      <button nz-button nzType="primary">Add</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+<nz-divider nzPlain nzText="Or"></nz-divider>

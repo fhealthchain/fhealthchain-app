@@ -1,0 +1,34 @@
+<nz-descriptions nzTitle="User Info">
+  <nz-descriptions-item nzTitle="UserName">Zhou Maomao</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Telephone">18100000000</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Live">Hangzhou, Zhejiang</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Remark">Empty</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Address">
+    No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China
+  </nz-descriptions-item>
+</nz-descriptions>
+
+<a nz-button [routerLink]="['add-permission']" nzType="link">Add Doctor Permission</a>
+
+<h3 [ngStyle]="{ margin: '16px 0' }">EHRs</h3>
+
+<nz-table #basicTable [nzData]="listOfData">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let data of basicTable.data">
+    <td>{{ data.name }}</td>
+    <td>{{ data.desc }}</td>
+    <td>{{ data.date }}</td>
+    <td>
+      <a [routerLink]="[data.name]" >Action 一 {{ data.name }}</a>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>

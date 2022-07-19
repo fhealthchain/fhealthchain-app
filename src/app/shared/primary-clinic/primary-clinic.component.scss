@@ -1,0 +1,31 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  margin: 0 !important;
+}
+
+.d-layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.primary-footer {
+  padding: 16px 0;
+  border-top: 1px solid #e3e3e3;
+  margin: 0 -8px;
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.overflow-auto {
+  height: calc(100vh - 75px);
+  overflow-y: auto;
+}

@@ -1,0 +1,50 @@
+<h2 class="text-center">Upload new EHR</h2>
+
+<div nz-row>
+  <div nz-col nzSpan="12">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="id">Patient ID</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your id!">
+          <input nz-input formControlName="id" id="id"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="medicare" nzRequired>Medicare Number</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your medicare!">
+          <input
+            nz-input
+            type="text"
+            id="medicare"
+            formControlName="medicare"
+          />
+        </nz-form-control>
+      </nz-form-item>
+      <div class="center">
+        <nz-upload
+          [(nzFileList)]="fileList"
+          [nzRemove]="handleRemoveFile"
+          [nzBeforeUpload]="beforeUpload">
+          <button nz-button type="button">
+            <i nz-icon nzType="upload"></i>
+            Select File
+          </button>
+        </nz-upload>
+        <button
+          nz-button
+          [nzType]="'primary'"
+          [nzLoading]="uploading"
+          (click)="handleUploadFile()"
+          [disabled]="fileList.length === 0"
+          style="margin-top: 16px"
+        >
+          {{ uploading ? 'Uploading' : 'Start Upload' }}
+        </button>
+      </div>
+    </form>
+  </div>
+  <div nz-col nzSpan="12" *ngIf="fileText">
+    <h4>Preview</h4>
+    <pre>{{fileText}}</pre>
+  </div>
+</div>

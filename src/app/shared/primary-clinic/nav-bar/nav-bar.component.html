@@ -1,0 +1,18 @@
+<header class="navbar">
+  <div class="navbar-left">
+    <h1>FHealthChain</h1>
+  </div>
+  <div class="navbar-center">
+    <img src="assets/fpt-software-logo.svg" alt="">
+  </div>
+  <div class="navbar-right">
+    <a nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu">
+      <nz-avatar nzIcon="user"></nz-avatar>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item>Logout</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+</header>

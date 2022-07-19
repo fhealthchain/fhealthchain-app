@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #79a1a1;
+}
+
+h1 {
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  margin: 0;
+}
+
+.navbar-center {
+  img {
+    height: 44px;
+  }
+}

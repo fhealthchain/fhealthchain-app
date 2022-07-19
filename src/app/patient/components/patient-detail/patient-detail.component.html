@@ -1,0 +1,10 @@
+<nz-descriptions nzTitle="EHR Info" [nzColumn]="{ xxl: 2, xl: 2, lg: 2, md: 2, sm: 2, xs: 2 }">
+  <nz-descriptions-item nzTitle="Name">EHR 1</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Date">Tue Jul 19 2022 14:50:42 GMT+0700 (Indochina Time)</nz-descriptions-item>
+  <nz-descriptions-item nzTitle="Desc">Lorem</nz-descriptions-item>
+</nz-descriptions>
+
+<h3 [ngStyle]="{ margin: '16px 0' }">List</h3>
+<nz-list nzBordered nzSize="small">
+  <nz-list-item *ngFor="let item of data">item</nz-list-item>
+</nz-list>
